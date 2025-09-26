@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CrowdSimulationRenderer – A1 (WebGL)</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="nav">
+      <h1>CrowdSimulationRenderer · A1</h1>
+      <button class="btn" data-mode="moveObstacle">Move Obstacle</button>
+      <button class="btn" data-mode="rotateObstacle">Rotate Obstacle</button>
+      <button class="btn" data-mode="scaleObstacle">Scale Obstacle</button>
+      <button class="btn" data-mode="movePerson">Move Person</button>
+      <button class="btn" id="resetBtn">Reset</button>
+      <div class="right">
+        <div class="legend">
+          Density per triangle:
+          <span class="swatch green"></span> green = ok
+          <span class="swatch blue"></span> blue = under
+          <span class="swatch red"></span> red = over
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div id="wrap">
+      <canvas id="glcanvas"></canvas>
+    </div>
+  </main>
+
+  <footer>
+    <p>Keys: <code>1</code> Move Obstacle, <code>2</code> Rotate, <code>3</code> Scale, 
+       <code>4</code> Move Person, <code>R</code> Reset.</p>
+  </footer>
+
+  <!-- JS files -->
+  <script src="js/utils.js"></script>
+  <script src="js/triangulation.js"></script>
+  <script src="js/state.js"></script>
+  <script src="js/renderer.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
