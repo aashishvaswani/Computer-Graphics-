@@ -45,3 +45,29 @@ The demo video + report show:
 
 ## Video Link
 https://drive.google.com/drive/folders/152GZPRLxgJYE5eJMFNNHx4D9plKlTg_B?usp=drive_link
+
+---
+
+## 🛠️ Compilation & Usage Instructions
+
+1. Clone the repository from GitHub:
+   ```
+   git clone https://github.com/aashishvaswani/Computer-Graphics-.git
+   cd Computer-Graphics-
+   ```
+   
+2. Open the src/index.html file in a modern browser:
+  - Double-click it, or
+  - Run open src/index.html (Mac) or start src/index.html (Windows).
+
+3. The application will launch and display:
+  - A rectangular boundary with triangulated layout.
+  - At least one obstacle within the triangulation.
+  - Black dots representing people.
+
+4. Use the mouse interactions to:
+  - Rotate or translate obstacles (click + drag).
+  - Scale obstacles about their center (drag edges).
+  - Move people between triangles (click on dots).
+
+5. The population density visualization updates automatically as interactions occur.
