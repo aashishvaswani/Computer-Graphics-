@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Star System Generator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="hud">
+    <div class="row title">Star System Generator</div>
+
+    <div class="row">
+      <span class="kbd">V</span> Toggle View:
+      <span id="viewMode">3D View</span>
+    </div>
+
+    <div class="row gap">
+      <span class="kbd">↑/↓</span> Speed &nbsp;|&nbsp;
+      <span class="kbd">Space</span> Pause/Play &nbsp;|&nbsp;
+      <span class="kbd">A</span> Axes &nbsp;|&nbsp;
+      <span class="kbd">O</span> Orbits
+    </div>
+
+    <div class="row gap">
+      <span class="kbd">+</span> Add &nbsp;|&nbsp;
+      <span class="kbd">-</span> Delete (min 3)
+    </div>
+
+    <div class="row gap">
+      <span class="kbd">X/x Y/y Z/z</span> Spin selected (paused) &nbsp;|&nbsp;
+      <span class="kbd">[ / ]</span> Scale (paused, resets on play)
+    </div>
+
+    <div class="row small">3D View: Drag to rotate · Scroll to zoom</div>
+    <div class="row small">Top View: Click a planet to select (picks & highlights)</div>
+  </div>
+
+  <canvas id="glCanvas"></canvas>
+
+  <!-- libs -->
+  <script src="https://cdn.jsdelivr.net/npm/gl-matrix@3.4.3/gl-matrix-min.js"></script>
+  <script>
+    window.mat4 = window.glMatrix?.mat4;
+    window.mat3 = window.glMatrix?.mat3;
+    window.vec3 = window.glMatrix?.vec3;
+    if (!window.mat4) alert("gl-matrix failed to load. Save it locally if offline.");
+  </script>
+
+  <script src="utils/obj_loader.js"></script>
+  <script src="models.js"></script>
+  <script src="shaders.js"></script>
+
+  <script src="glutils.js"></script>
+  <script src="scene.js"></script>
+  <script src="input.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
